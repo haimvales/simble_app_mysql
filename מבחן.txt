@@ -1,0 +1,58 @@
+לפתוח גיט חדש v
+לפתוח תיקייה v
+לחבר תיקייה לגיט v
+להעתיק קישור של גיט v
+לשלוח קישור של גיט v
+להתקין פאקטש גייסון v
+לשנות למודול v
+לפתוח גיטנואר ולהכניס מה לא מעלים == node_modules  package-lock.json vועוד
+
+לפתוח טאבים v
+לפתוח מודול טסט v
+
+npm i (מתקין מה שיש בקובץ) v
+
+[
+npm i nodemon
+"startindex": "nodemon index.js"
+startindex is a name//
+index.js is a module//
+"nodemon":"3.1.11"
+//באובייקט למטה איפה שהטייפ ועוד//
+npm run startindex
+]
+
+[
+"start": "node --watch app.js"
+start is a name//
+app.js is a module//
+npm run start  
+]
+
+[
+npm i nanoid
+import nanoid from 'nanoid' '
+(// Return a random integer between 1 and 10 (both included):
+Math.floor(Math.random() * 10) + 1)
+( // Return a random integer from 0 to 99 (both included):
+Math.floor(Math.random() * 100); )
+]
+
+[
+npm i analiza-sync
+import input from 'analiza-sync'
+(questionint ?)
+]
+
+[
+import fs from 'fs/promises'
+]
+
+[
+npm i Express
+import express from "express";
+const app = express();
+const port = 3002;
+
+app.use(express.json());
+]
