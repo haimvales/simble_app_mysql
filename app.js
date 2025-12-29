@@ -1,6 +1,5 @@
-import { deleteById, findById, getAll, insertOne } from "./DAL/users.js";
+import { creataTable, deleteById, findById, getAll, insertOne, updateById } from "./DAL/users.js";
 import input from 'analiza-sync';
-// import connection from './db.js';
 
 
 let connected = true
@@ -10,8 +9,10 @@ getAll = 1
 insertOne = 2
 findById = 3
 deleteById = 4
-Exit = 5
-        `); //if (Number.isNaN(Number(givenPrice)))
+updateById = 5
+createtable = 6
+Exit = 7
+        `); 
     const click = input(``)
     switch(click){
         case '1':
@@ -31,25 +32,32 @@ Exit = 5
             }
         case '3':
             const idfind = input(`id`)
-            console.log(await findById(idfind))
-            break;
+            const isSafe = /^[0-9]+$/.test(id);
+            if (!isSafe){
+                console.log(await insertOne({id,username}))
+                break; 
+            } else {
+                console.log(await findById(idfind))
+                break;                
+            }
         case '4':
             const iddelete = input(`id`)
             console.log(await deleteById(iddelete))
             break;
         case '5':
+            const idupdate = input(`id`)
+            const usernameupdate = input(`username`)
+            console.log(await updateById(idupdate,usernameupdate))
+            break;
+        case '6':
+            const createtable = input(`name table`)
+            console.log(await creataTable(createtable))
+            break;
+        case '7':
             connected = false
             break;
         default:
-            console.log(`Type a valid value between 1 and 5.`);
+            console.log(`Type a valid value between 1 and 7.`);
     }
 }
-
-
-
-
-
-
-
-
 
