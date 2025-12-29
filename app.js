@@ -2,6 +2,7 @@ import { creataTable, deleteById, findById, getAll, insertOne, updateById } from
 import input from 'analiza-sync';
 
 
+
 let connected = true
 while(connected){
     console.log(`
