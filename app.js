@@ -3,6 +3,7 @@ import input from 'analiza-sync';
 
 
 
+
 let connected = true
 while(connected){
     console.log(`
